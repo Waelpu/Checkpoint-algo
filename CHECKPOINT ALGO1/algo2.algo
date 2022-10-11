@@ -1,0 +1,25 @@
+//la chaine de caractère contient déjà que des ( et )
+
+ALGORITHM Egalité_parenthèse
+VAR 
+    ch:STRING
+    i:INTEGER
+BEGIN
+    i:=0
+    write("Donner la phrase",ch)
+    read(ch)
+    REPEAT
+        IF (ch[i]="(") THEN
+            i:= i+1
+        END_IF
+        IF (ch[i]=")") THEN
+            i:= i-1
+        END_IF
+    UNTIL (ch[i]=".")
+    IF (i=0) THEN
+        write("la phrase est valide")
+        ELSE
+    write("la phrase est invalide")
+    END_IF
+    
+END
